@@ -26,6 +26,13 @@ a:focus {
   color: #cfe7ff;
 }
 
+}
+
+a:hover,
+a:focus {
+  color: #cfe7ff;
+}
+
 nav {
   margin-bottom: var(--section-spacing);
 }
