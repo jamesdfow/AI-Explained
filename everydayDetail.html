@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>AI in Everyday Life</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">AI, Explained</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="learnPage.html">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="useCases.html">Use Cases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletterPage.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-wrapper detail-page">
+      <header class="detail-hero">
+        <div class="detail-card-group" aria-live="polite">
+          <article class="detail-card is-active" data-view="home" aria-hidden="false">
+            <h2 class="detail-card__eyebrow">Spotlight</h2>
+            <h3 class="detail-card__title">AI in the Home</h3>
+            <p class="detail-card__summary">
+              Discover how intelligent assistants, adaptive lighting, and proactive
+              appliances create calmer, safer living spaces.
+            </p>
+            <a class="btn btn-primary" href="#home">Explore insights</a>
+          </article>
+          <article class="detail-card" data-view="outdoors" aria-hidden="true">
+            <h2 class="detail-card__eyebrow">Spotlight</h2>
+            <h3 class="detail-card__title">AI in the Outdoors</h3>
+            <p class="detail-card__summary">
+              See how location-aware tools, environmental sensors, and smart
+              navigation guide experiences in the open air.
+            </p>
+            <a class="btn btn-primary" href="#outdoors">Explore insights</a>
+          </article>
+        </div>
+        <div class="detail-summary">
+          <p class="detail-caption">CAPTION</p>
+          <h1 class="detail-title">AI in Everyday Life</h1>
+          <p class="detail-intro">
+            Choose a focus area to explore how ambient intelligence feels in daily
+            routines. These storyboards expand on the content cards from the
+            homepage, unpacking the design goals, standout interactions, and
+            responsible AI considerations behind each experience.
+          </p>
+          <div class="detail-tabs" role="tablist" aria-label="AI in Everyday Life focus">
+            <button
+              class="detail-tab is-active"
+              data-target="home"
+              role="tab"
+              id="home-tab"
+              aria-selected="true"
+              aria-controls="home">
+              AI in the Home
+            </button>
+            <button
+              class="detail-tab"
+              data-target="outdoors"
+              role="tab"
+              id="outdoors-tab"
+              aria-selected="false"
+              aria-controls="outdoors">
+              AI in the Outdoors
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section
+        id="home"
+        class="detail-content is-active"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+        aria-hidden="false">
+        <div class="detail-keypoints" aria-label="Highlights for AI in the Home">
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Adaptive comfort</span>
+            <p>Smart thermostats and blinds fine-tune the environment without manual overrides.</p>
+          </div>
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Household safety</span>
+            <p>Computer-vision hubs flag unexpected motion and escalate alerts with context.</p>
+          </div>
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Energy insights</span>
+            <p>Usage dashboards translate raw sensor data into clear recommendations.</p>
+          </div>
+        </div>
+        <article class="detail-article">
+          <h2>Intelligent helpers inside the home</h2>
+          <p>
+            A cohesive home experience starts with a shared data layer that respects
+            privacy boundaries. Devices negotiate what to share through local
+            handshakes, allowing a thermostat to learn occupancy patterns without
+            uploading every motion event to the cloud. When the system suggests a
+            new schedule, it presents a short explanation outlining the factors that
+            influenced the recommendation.
+          </p>
+          <p>
+            Voice assistants anchor the interface, but every control has a visual
+            fallback for quieter moments. Large typography and generous whitespace
+            make these controls easy to scan from across the room. When a routine is
+            edited, the interface previews the downstream effects across lighting,
+            security, and appliances before changes go live.
+          </p>
+          <p>
+            Responsible AI practices show up in the diagnostics drawer. Residents can
+            view the exact prompts and data slices used to train models, plus revoke
+            permissions for any device instantly. This transparent tooling builds
+            trust while keeping the experience approachable for every member of the
+            household.
+          </p>
+        </article>
+      </section>
+
+      <section
+        id="outdoors"
+        class="detail-content"
+        role="tabpanel"
+        aria-labelledby="outdoors-tab"
+        aria-hidden="true">
+        <div class="detail-keypoints" aria-label="Highlights for AI in the Outdoors">
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Trail intelligence</span>
+            <p>Guidance layers blend satellite imagery with recent trail reports for safer trips.</p>
+          </div>
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Weather awareness</span>
+            <p>Predictive alerts adapt itineraries as microclimate conditions shift.</p>
+          </div>
+          <div class="detail-keypoint">
+            <span class="detail-keypoint__label">Community signals</span>
+            <p>Wearables surface live updates from nearby hikers to crowdsource support.</p>
+          </div>
+        </div>
+        <article class="detail-article">
+          <h2>Companion AI for outdoor adventures</h2>
+          <p>
+            Outdoor guidance blends contextual data from GPS, barometers, and air-quality sensors
+            into a single mission view. Before a hike begins, the system packages a
+            downloadable kit with offline maps, emergency contacts, and personalized
+            pacing suggestions.
+          </p>
+          <p>
+            While on the trail, an adaptive HUD surfaces only the most relevant
+            signal at a time. If elevation gain spikes, hikers see a short recovery
+            plan paired with quick hydration reminders. When trails merge, a
+            glanceable mini-map clarifies the recommended path and highlights crowd
+            density using color.
+          </p>
+          <p>
+            Ethics checkpoints appear throughout the journey. Location sharing can be
+            paused with a single tap, and trail reports require consent before
+            posting photos with identifiable people. These controls keep the
+            experience empowering while respecting personal boundaries.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script>
+      const tabs = document.querySelectorAll('.detail-tab');
+      const cards = document.querySelectorAll('.detail-card');
+      const sections = document.querySelectorAll('.detail-content');
+
+      function activateView(view) {
+        tabs.forEach((tab) => {
+          const isActive = tab.dataset.target === view;
+          tab.classList.toggle('is-active', isActive);
+          tab.setAttribute('aria-selected', isActive.toString());
+        });
+
+        cards.forEach((card) => {
+          const isActive = card.dataset.view === view;
+          card.classList.toggle('is-active', isActive);
+          card.setAttribute('aria-hidden', (!isActive).toString());
+        });
+
+        sections.forEach((section) => {
+          const isActive = section.id === view;
+          section.classList.toggle('is-active', isActive);
+          section.setAttribute('aria-hidden', (!isActive).toString());
+        });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+          event.preventDefault();
+          const view = tab.dataset.target;
+          if (view) {
+            history.replaceState(null, '', `#${view}`);
+            activateView(view);
+          }
+        });
+      });
+
+      const validViews = ['home', 'outdoors'];
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash && validViews.includes(initialHash)) {
+        activateView(initialHash);
+      } else {
+        activateView('home');
+      }
+
+      window.addEventListener('hashchange', () => {
+        const view = window.location.hash.replace('#', '');
+        if (validViews.includes(view)) {
+          activateView(view);
+        }
+      });
+    </script>
+  </body>
+</html>
