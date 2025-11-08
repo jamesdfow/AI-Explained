@@ -26,11 +26,48 @@ a:focus {
   color: #cfe7ff;
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  border: none;
+  background: linear-gradient(135deg, #4f73ff, #7b5bff);
+  color: #ffffff;
+  box-shadow: 0 16px 32px rgba(79, 115, 255, 0.35);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-a:hover,
-a:focus {
-  color: #cfe7ff;
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(79, 115, 255, 0.45);
+  color: #ffffff;
+}
+
+.btn:focus-visible {
+  outline: 2px solid rgba(255, 211, 122, 0.85);
+  outline-offset: 2px;
+}
+
+.btn:visited {
+  color: #ffffff;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 nav {
@@ -103,23 +140,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-.hero__actions .btn {
-  padding: 0.75rem 1.75rem;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
-.hero__actions .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: antiquewhite;
-}
-
-.hero__actions .btn-outline-light:hover,
-.hero__actions .btn-outline-light:focus {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
 .topic-section {
   margin-bottom: var(--section-spacing);
 }
@@ -158,24 +178,7 @@ h3 {
 }
 
 .topic-pill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 1.75rem;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.topic-pill.btn-primary {
-  background: linear-gradient(135deg, #4f73ff, #7b5bff);
-  border: none;
-}
-
-.topic-pill.btn-primary:hover,
-.topic-pill.btn-primary:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(79, 115, 255, 0.3);
+  width: 100%;
 }
 
 .page-header {
@@ -218,22 +221,12 @@ h3 {
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
 }
 
-.card .btn {
-  border-radius: 999px;
-  padding-inline: 1.5rem;
-}
-
 .newsletter-form {
   background: var(--surface-color);
   border: 1px solid var(--surface-border);
   border-radius: 1rem;
   padding: clamp(1.5rem, 3vw, 2.75rem);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-}
-
-.newsletter-form .btn {
-  border-radius: 999px;
-  padding-inline: 1.75rem;
 }
 
 .detail-page {
