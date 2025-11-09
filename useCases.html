@@ -1,120 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="themeToggle.js" defer></script>
     <title>AI, Explained Page</title>
-</head>
-<body>
-<nav class="navbar navbar-dark bg-dark sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">AI, Explained</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="learnPage.html">Learn</a>
-          </li>
-                    <li class="nav-item">
-            <a class="nav-link" href="useCases.html">Use Cases</a>
-          </li>
-                    </li>
-                    <li class="nav-item">
-            <a class="nav-link" href="newsletterPage.html">Newsletter</a>
-          </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">AI, Explained</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="#offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="learnPage.html">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="useCases.html">Use Cases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletterPage.html">Newsletter</a>
+              </li>
             </ul>
-          </li> -->
-        </ul>
-        <!-- <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-success" type="submit">Search</button>
-        </form> -->
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
-<h1>AI use in Industry</h1>
-    <div class="contentContainer">
-    <div
-      class="card text-center mb-3"
-      style=""
-      name="contentCard">
-      <div class="card-body">
-        <h5 class="card-title">AI in Healthcare</h5>
-        <p class="card-text">
-          How AI is transforming the healthcare industry.
+    </nav>
+    <main class="page-wrapper">
+      <header class="page-header">
+        <h1>AI use in Industry</h1>
+        <p>
+          Explore real-world applications showing how organizations leverage intelligent systems to improve efficiency, accuracy, and
+          customer experiences.
         </p>
-        <a
-          href="#"
-          class="btn btn-primary"
-          >Learn More</a
-        >
+      </header>
+      <div class="contentContainer">
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">AI in Healthcare</h5>
+            <p class="card-text">
+              How AI is transforming the healthcare industry.
+            </p>
+            <a href="#healthcare" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">AI in Logistics</h5>
+            <p class="card-text">
+              AI is helping warehouses, vehicle fleets, and predicting more accurate delivery times with its use of AI-powered solutions.
+            </p>
+            <a href="#logistics" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title">AI in Auto</h5>
+            <p class="card-text">
+              The automotive industry has seen a massive amount of transformation thanks to AI.
+            </p>
+            <a href="#automotive" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Explore more Industry Uses</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Education</a></li>
+            <li><a class="dropdown-item" href="#">Sports</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div
-      class="card text-center mb-3"
-      style="">
-      <div class="card-body">
-        <h5 class="card-title">AI in Logistics</h5>
-        <p class="card-text">
-          AI is helping warehouses, vehicle fleets, and predicting more accurate delivery times with its use of AI-powered solutions.
+      <section id="healthcare" class="anchor-section">
+        <p class="anchor-section__eyebrow">Industry insight</p>
+        <p class="anchor-section__intro">
+          Clinical teams rely on AI to surface high-risk cases faster while keeping providers in control of every decision.
         </p>
-        <a
-          href="#"
-          class="btn btn-primary"
-          >Learn More</a
-        >
-      </div>
-    </div>
-    <div
-      class="card text-center mb-3"
-      style="">
-      <div class="card-body">
-        <h5 class="card-title">AI in Auto</h5>
-        <p class="card-text">
-          The automotive industry has seen a massive amount of transformation thanks to AI.
+        <article class="detail-article">
+          <h2>Supporting clinicians with augmented intelligence</h2>
+          <p>
+            Diagnostic models scan imaging studies for early signs of disease, flagging anomalies for radiologists to review. Instead
+            of replacing experts, AI pre-sorts the daily queue so specialists can focus on the most urgent findings. Treatment planners
+            combine patient history, lab results, and evidence-based guidelines to recommend tailored therapies.
+          </p>
+          <p>
+            Safeguards keep the workflow transparent. Dashboards display confidence scores, reference similar historical cases, and log
+            the clinician’s final decision. Feedback loops allow doctors to correct outputs, steadily improving accuracy while meeting
+            regulatory requirements.
+          </p>
+          <ul class="detail-list">
+            <li>Maintain human sign-off on every diagnosis and treatment recommendation.</li>
+            <li>Encrypt patient data in transit and limit model access to the minimum necessary attributes.</li>
+            <li>Audit prediction performance across demographic groups to catch and address bias early.</li>
+          </ul>
+        </article>
+      </section>
+      <section id="logistics" class="anchor-section">
+        <p class="anchor-section__eyebrow">Operations spotlight</p>
+        <p class="anchor-section__intro">
+          Logistics networks use AI to balance inventory, optimize routes, and adapt to disruption in real time.
         </p>
-        <a
-          href="#"
-          class="btn btn-primary"
-          >Learn More</a
-        >
-      </div>
-    </div>
-    <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-Explore more Industry Uses</a>
-
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Education</a></li>
-    <li><a class="dropdown-item" href="#">Sports</a></li>
-  </ul>
-</div>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
-</body>
-
+        <article class="detail-article">
+          <h2>Keeping supply chains resilient with AI</h2>
+          <p>
+            Forecasting models ingest purchase orders, seasonality, and external signals like weather to predict demand weeks ahead. When
+            paired with warehouse automation, the system stages stock before orders arrive and alerts teams when anomalies appear. Fleet
+            optimizers reroute drivers around traffic and dynamically bundle deliveries to reduce empty miles.
+          </p>
+          <p>
+            Control centers track these predictions through a shared dashboard. Scenario simulators let operators test what-if events—such
+            as a port closure—and instantly see the downstream impacts. Clear escalation paths ensure people can intervene whenever
+            on-the-ground knowledge disagrees with the model.
+          </p>
+          <ul class="detail-list">
+            <li>Blend historical data with live telemetry for the most accurate forecasts.</li>
+            <li>Expose rationale for route changes so drivers understand why instructions shift mid-shift.</li>
+            <li>Measure sustainability gains from fewer miles driven and smarter packing.</li>
+          </ul>
+        </article>
+      </section>
+      <section id="automotive" class="anchor-section">
+        <p class="anchor-section__eyebrow">Mobility trends</p>
+        <p class="anchor-section__intro">
+          Automakers deploy AI from the factory floor to the driver’s seat to make vehicles safer and more personalized.
+        </p>
+        <article class="detail-article">
+          <h2>Driving experiences shaped by intelligent systems</h2>
+          <p>
+            In production plants, computer vision monitors assembly quality and catches deviations before they become costly recalls. On the
+            road, advanced driver-assistance systems fuse camera, radar, and lidar feeds to maintain safe distances, keep vehicles centered,
+            and react faster than a human alone could.
+          </p>
+          <p>
+            Connected dashboards learn driver preferences, from cabin temperature to media choices, and adjust automatically for each trip.
+            Over-the-air updates deliver new capabilities without a service center visit, while cybersecurity layers protect the vehicle’s
+            digital perimeter.
+          </p>
+          <ul class="detail-list">
+            <li>Test automated driving features across diverse weather, lighting, and traffic conditions.</li>
+            <li>Provide clear handoff cues so drivers know when they must retake control.</li>
+            <li>Segment vehicle telemetry to protect personal data while enabling continuous improvement.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
