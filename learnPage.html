@@ -60,7 +60,7 @@
               Explore how AI uses Computer Vision to help people with a number of
               visual tasks.
             </p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#vision" class="btn btn-primary">Learn More</a>
           </div>
         </div>
         <div class="card text-center mb-3">
@@ -71,7 +71,7 @@
               help computers recognize patterns, make decisions, and learn from
               data.
             </p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#neural" class="btn btn-primary">Learn More</a>
           </div>
         </div>
         <div class="card text-center mb-3">
@@ -82,7 +82,7 @@
               patterns, improving over time, and making predictions without being
               explicitly programmed.
             </p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#ml" class="btn btn-primary">Learn More</a>
           </div>
         </div>
         <div class="dropdown">
@@ -94,6 +94,79 @@
           </ul>
         </div>
       </div>
+      <section id="vision" class="anchor-section">
+        <p class="anchor-section__eyebrow">Deep dive</p>
+        <p class="anchor-section__intro">
+          Computer vision combines cameras, labeled datasets, and trained models to interpret what is happening in an image or
+          video stream.
+        </p>
+        <article class="detail-article">
+          <h2>How computer vision reads the world</h2>
+          <p>
+            Raw pixels become usable information through a pipeline of preprocessing, feature extraction, and prediction. Clean
+            sensor input feeds a model trained on thousands of examples. The network learns to spot edges, textures, and shapes
+            before assembling them into recognizable objects such as people, storefronts, or street signs.
+          </p>
+          <p>
+            Once deployed, the model outputs both a label and a confidence score. Interfaces surface that score so operators know
+            when to double-check a result. Pairing the prediction with explainability tools—like heatmaps that highlight the
+            pixels driving a decision—keeps the experience trustworthy.
+          </p>
+          <ul class="detail-list">
+            <li>Collect representative training data that reflects the users and environments you support.</li>
+            <li>Benchmark on real-world footage to verify that accuracy holds up outside the lab.</li>
+            <li>Provide manual override flows when the confidence score dips below an agreed threshold.</li>
+          </ul>
+        </article>
+      </section>
+      <section id="neural" class="anchor-section">
+        <p class="anchor-section__eyebrow">Concept walkthrough</p>
+        <p class="anchor-section__intro">
+          Neural networks stack layers of tiny mathematical functions that learn to transform inputs into meaningful predictions.
+        </p>
+        <article class="detail-article">
+          <h2>What makes a neural network learn</h2>
+          <p>
+            Each neuron inside a network takes a weighted sum of its inputs, runs it through an activation function, and passes the
+            result forward. During training, backpropagation nudges the weights so the network’s output matches the correct answer.
+            Repeating this process across many labeled examples helps the model discover complex patterns.
+          </p>
+          <p>
+            Different architectures specialize in unique tasks. Convolutional layers capture spatial structure for images, while
+            recurrent and transformer-based layers excel at sequential data like language or sensor readings. Choosing the right
+            architecture and tuning the number of layers controls how expressive—and how computationally demanding—the model becomes.
+          </p>
+          <ul class="detail-list">
+            <li>Start with a baseline architecture, then scale depth and width only when accuracy plateaus.</li>
+            <li>Use regularization techniques such as dropout and weight decay to prevent memorizing the training data.</li>
+            <li>Log validation metrics and loss curves so stakeholders can see the network improving over time.</li>
+          </ul>
+        </article>
+      </section>
+      <section id="ml" class="anchor-section">
+        <p class="anchor-section__eyebrow">Process spotlight</p>
+        <p class="anchor-section__intro">
+          Machine learning projects move through defined stages, from gathering data to monitoring models after launch.
+        </p>
+        <article class="detail-article">
+          <h2>How machine learning systems stay useful</h2>
+          <p>
+            Successful ML deployments begin with a clear problem statement and quality data. Teams split information into training
+            and testing sets, engineer features, and pick algorithms that balance accuracy with transparency. Cross-validation helps
+            confirm the model performs reliably before it reaches production.
+          </p>
+          <p>
+            After release, continuous monitoring keeps the system aligned with user needs. Dashboards track drift in data
+            distributions, while feedback loops gather user corrections. Retraining on fresh samples ensures the model adapts as the
+            environment changes.
+          </p>
+          <ul class="detail-list">
+            <li>Define success metrics that map directly to business or user outcomes.</li>
+            <li>Automate data quality checks so anomalies trigger investigations quickly.</li>
+            <li>Schedule regular review cadences to assess fairness, privacy, and emerging regulations.</li>
+          </ul>
+        </article>
+      </section>
     </main>
 
     <script

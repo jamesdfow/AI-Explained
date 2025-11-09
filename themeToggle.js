@@ -45,12 +45,21 @@
 }
 
 :root.theme-light .btn {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.25);
+  background: linear-gradient(135deg, #1d4ed8, #5b21b6);
+  color: #f8fafc;
+  text-shadow: 0 1px 1px rgba(15, 23, 42, 0.35);
+  box-shadow: 0 20px 44px rgba(29, 78, 216, 0.28);
+  border: 1px solid rgba(15, 23, 42, 0.2);
+}
+
+:root.theme-light .btn:hover,
+:root.theme-light .btn:focus {
+  box-shadow: 0 24px 54px rgba(29, 78, 216, 0.35);
+  color: #f8fafc;
 }
 
 :root.theme-light .btn:focus-visible {
-  outline-color: rgba(37, 99, 235, 0.6);
+  outline-color: rgba(29, 78, 216, 0.6);
 }
 
 :root.theme-light .navbar {
@@ -118,8 +127,8 @@
 }
 
 :root.theme-light .detail-tab.is-active {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8, #5b21b6);
+  color: #f8fafc;
 }
 
 :root.theme-light .detail-card {
