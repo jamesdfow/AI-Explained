@@ -50,14 +50,16 @@
         <h1>Sign up for our monthly Newsletter!</h1>
         <p>Stay informed with curated stories, explainers, and resources to keep you ahead of the latest AI breakthroughs.</p>
       </header>
-      <form class="newsletter-form row g-3">
+      <form class="newsletter-form row g-3" novalidate>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="you@example.com" />
+          <input type="email" class="form-control" id="inputEmail4" placeholder="you@example.com" required />
+          <div class="invalid-feedback" id="emailError">Please enter a valid email address (example: you@example.com).</div>
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity" placeholder="City" />
+          <input type="text" class="form-control" id="inputCity" placeholder="City" required />
+          <div class="invalid-feedback" id="cityError">Enter the city name using letters and spaces only.</div>
         </div>
         <div class="col-md-4">
           <label for="inputState" class="form-label">State</label>
@@ -71,16 +73,110 @@
         </div>
         <div class="col-md-2">
           <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip" placeholder="12345" />
+          <input type="text" class="form-control" id="inputZip" placeholder="12345" required inputmode="numeric" />
+          <div class="invalid-feedback" id="zipError">Provide a 5-digit ZIP code using numbers only.</div>
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary">Sign up!</button>
         </div>
       </form>
     </main>
+    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="submissionModalLabel">Heads up!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This won't submit to anywhere, but this pop-up is to show the user this button does work.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Got it</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+    <script>
+      const form = document.querySelector('.newsletter-form');
+      const emailInput = document.getElementById('inputEmail4');
+      const cityInput = document.getElementById('inputCity');
+      const zipInput = document.getElementById('inputZip');
+      const modalElement = document.getElementById('submissionModal');
+      const submissionModal = new bootstrap.Modal(modalElement);
+
+      const validators = {
+        email(value) {
+          if (!value) {
+            return 'Please enter a valid email address (example: you@example.com).';
+          }
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+            ? ''
+            : 'Please enter a valid email address (example: you@example.com).';
+        },
+        city(value) {
+          if (!value) {
+            return 'Enter the city name using letters and spaces only.';
+          }
+          return /^[A-Za-z\s]+$/.test(value)
+            ? ''
+            : 'Enter the city name using letters and spaces only.';
+        },
+        zip(value) {
+          if (!value) {
+            return 'Provide a 5-digit ZIP code using numbers only.';
+          }
+          return /^\d{5}$/.test(value)
+            ? ''
+            : 'Provide a 5-digit ZIP code using numbers only.';
+        }
+      };
+
+      function setFieldState(input, message) {
+        const feedbackElement = input.nextElementSibling;
+        if (message) {
+          input.classList.add('is-invalid');
+          feedbackElement.textContent = message;
+        } else {
+          input.classList.remove('is-invalid');
+        }
+      }
+
+      function validate() {
+        const emailMessage = validators.email(emailInput.value.trim());
+        const cityMessage = validators.city(cityInput.value.trim());
+        const zipMessage = validators.zip(zipInput.value.trim());
+
+        setFieldState(emailInput, emailMessage);
+        setFieldState(cityInput, cityMessage);
+        setFieldState(zipInput, zipMessage);
+
+        return !emailMessage && !cityMessage && !zipMessage;
+      }
+
+      [emailInput, cityInput, zipInput].forEach((input) => {
+        input.addEventListener('input', () => {
+          if (input.classList.contains('is-invalid')) {
+            validate();
+          }
+        });
+      });
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (validate()) {
+          submissionModal.show();
+        }
+      });
+
+      modalElement.addEventListener('hidden.bs.modal', () => {
+        form.reset();
+        [emailInput, cityInput, zipInput].forEach((input) => input.classList.remove('is-invalid'));
+      });
+    </script>
   </body>
 </html>
