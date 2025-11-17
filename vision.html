@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="themeToggle.js" defer></script>
+    <title>Computer Vision Deep Dive</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">AI, Explained</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="learnPage.html">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="useCases.html">Use Cases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletterPage.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="page-wrapper learn-detail" role="main">
+      <figure class="learn-detail__media">
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+          alt="Computer vision overlay analyzing a street scene"
+          loading="lazy" />
+        <figcaption class="learn-detail__caption">Illustration: A neural net overlay highlights detected objects in real time.</figcaption>
+      </figure>
+      <section class="learn-detail__body">
+        <p class="anchor-section__eyebrow">Deep dive</p>
+        <p class="anchor-section__intro">
+          Computer vision combines cameras, labeled datasets, and trained models to interpret what is happening in an image or video stream.
+        </p>
+        <article class="detail-article">
+          <h1>How computer vision reads the world</h1>
+          <p>
+            Raw pixels become usable information through a pipeline of preprocessing, feature extraction, and prediction. Clean sensor input feeds a model trained on thousands of examples. The network learns to spot edges, textures, and shapes before assembling them into recognizable objects such as people, storefronts, or street signs.
+          </p>
+          <p>
+            Once deployed, the model outputs both a label and a confidence score. Interfaces surface that score so operators know when to double-check a result. Pairing the prediction with explainability tools—like heatmaps that highlight the pixels driving a decision—keeps the experience trustworthy.
+          </p>
+          <ul class="detail-list">
+            <li>Collect representative training data that reflects the users and environments you support.</li>
+            <li>Benchmark on real-world footage to verify that accuracy holds up outside the lab.</li>
+            <li>Provide manual override flows when the confidence score dips below an agreed threshold.</li>
+          </ul>
+        </article>
+        <div class="learn-detail__actions">
+          <a class="btn btn-primary" href="learnPage.html">Back to Learn hub</a>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

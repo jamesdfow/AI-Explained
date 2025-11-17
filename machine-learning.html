@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="themeToggle.js" defer></script>
+    <title>Machine Learning Process Spotlight</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">AI, Explained</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="learnPage.html">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="useCases.html">Use Cases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletterPage.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="page-wrapper learn-detail" role="main">
+      <figure class="learn-detail__media">
+        <img
+          src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1200&q=80"
+          alt="Data scientist reviewing charts and dashboards on a laptop"
+          loading="lazy" />
+        <figcaption class="learn-detail__caption">Workflow: Monitoring dashboards help teams keep models aligned with reality.</figcaption>
+      </figure>
+      <section class="learn-detail__body">
+        <p class="anchor-section__eyebrow">Process spotlight</p>
+        <p class="anchor-section__intro">
+          Machine learning projects move through defined stages, from gathering data to monitoring models after launch.
+        </p>
+        <article class="detail-article">
+          <h1>How machine learning systems stay useful</h1>
+          <p>
+            Successful ML deployments begin with a clear problem statement and quality data. Teams split information into training and testing sets, engineer features, and pick algorithms that balance accuracy with transparency. Cross-validation helps confirm the model performs reliably before it reaches production.
+          </p>
+          <p>
+            After release, continuous monitoring keeps the system aligned with user needs. Dashboards track drift in data distributions, while feedback loops gather user corrections. Retraining on fresh samples ensures the model adapts as the environment changes.
+          </p>
+          <ul class="detail-list">
+            <li>Define success metrics that map directly to business or user outcomes.</li>
+            <li>Automate data quality checks so anomalies trigger investigations quickly.</li>
+            <li>Schedule regular review cadences to assess fairness, privacy, and emerging regulations.</li>
+          </ul>
+        </article>
+        <div class="learn-detail__actions">
+          <a class="btn btn-primary" href="learnPage.html">Back to Learn hub</a>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

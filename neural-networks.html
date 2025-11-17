@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="themeToggle.js" defer></script>
+    <title>Neural Network Walkthrough</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">AI, Explained</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">AI, Explained</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="learnPage.html">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="useCases.html">Use Cases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newsletterPage.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="page-wrapper learn-detail" role="main">
+      <figure class="learn-detail__media">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+          alt="Colorful visualization of neural network connections on a computer screen"
+          loading="lazy" />
+        <figcaption class="learn-detail__caption">Visualization: Layered connections illustrate how signals travel through a network.</figcaption>
+      </figure>
+      <section class="learn-detail__body">
+        <p class="anchor-section__eyebrow">Concept walkthrough</p>
+        <p class="anchor-section__intro">
+          Neural networks stack layers of tiny mathematical functions that learn to transform inputs into meaningful predictions.
+        </p>
+        <article class="detail-article">
+          <h1>What makes a neural network learn</h1>
+          <p>
+            Each neuron inside a network takes a weighted sum of its inputs, runs it through an activation function, and passes the result forward. During training, backpropagation nudges the weights so the network’s output matches the correct answer. Repeating this process across many labeled examples helps the model discover complex patterns.
+          </p>
+          <p>
+            Different architectures specialize in unique tasks. Convolutional layers capture spatial structure for images, while recurrent and transformer-based layers excel at sequential data like language or sensor readings. Choosing the right architecture and tuning the number of layers controls how expressive—and how computationally demanding—the model becomes.
+          </p>
+          <ul class="detail-list">
+            <li>Start with a baseline architecture, then scale depth and width only when accuracy plateaus.</li>
+            <li>Use regularization techniques such as dropout and weight decay to prevent memorizing the training data.</li>
+            <li>Log validation metrics and loss curves so stakeholders can see the network improving over time.</li>
+          </ul>
+        </article>
+        <div class="learn-detail__actions">
+          <a class="btn btn-primary" href="learnPage.html">Back to Learn hub</a>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
