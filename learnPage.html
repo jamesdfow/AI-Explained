@@ -17,7 +17,8 @@
     <title>AI, Explained Page</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+    <!-- Accessibility: Provide a descriptive label so assistive tech announces this as the site's primary navigation. -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">AI, Explained</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="#offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -47,7 +48,8 @@
         </div>
       </div>
     </nav>
-    <main class="page-wrapper">
+    <!-- Accessibility: Explicit main landmark makes skip links and screen readers announce primary content reliably. -->
+    <main class="page-wrapper" role="main">
       <header class="page-header">
         <h1>Learn</h1>
         <p>Discover approachable explainers that unpack foundational AI concepts and help you build confidence in the technology.</p>
@@ -86,9 +88,17 @@
           </div>
         </div>
         <div class="dropdown">
-          <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Explore more AI capabilities</a>
-          <ul class="dropdown-menu">
+          <!-- Accessibility: Use a true button for the dropdown trigger so it responds to keyboard activation without extra tabindex hacks. -->
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="capabilitiesDropdown"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="capabilitiesDropdownMenu">
+            Explore more AI capabilities</button>
+          <ul class="dropdown-menu" id="capabilitiesDropdownMenu" aria-labelledby="capabilitiesDropdown">
             <li><a class="dropdown-item" href="#">Deep Learning</a></li>
             <li><a class="dropdown-item" href="#">Agentic AI</a></li>
           </ul>

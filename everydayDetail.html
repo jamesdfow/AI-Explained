@@ -13,7 +13,8 @@
     <title>AI in Everyday Life</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+    <!-- Accessibility: Provide a descriptive label so assistive tech announces this as the site's primary navigation. -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">AI, Explained</a>
         <button
@@ -58,7 +59,8 @@
       </div>
     </nav>
 
-    <main class="page-wrapper detail-page">
+    <!-- Accessibility: Explicit main landmark makes skip links and screen readers announce primary content reliably. -->
+    <main class="page-wrapper detail-page" role="main">
       <header class="detail-hero">
         <div class="detail-card-group" aria-live="polite">
           <article class="detail-card is-active" data-view="home" aria-hidden="false">
@@ -89,6 +91,7 @@
             homepage, unpacking the design goals, standout interactions, and
             responsible AI considerations behind each experience.
           </p>
+          <!-- Accessibility: Implement the roving tabindex pattern so tabs expose predictable keyboard focus order. -->
           <div class="detail-tabs" role="tablist" aria-label="AI in Everyday Life focus">
             <button
               class="detail-tab is-active"
@@ -96,7 +99,8 @@
               role="tab"
               id="home-tab"
               aria-selected="true"
-              aria-controls="home">
+              aria-controls="home"
+              tabindex="0">
               AI in the Home
             </button>
             <button
@@ -105,19 +109,22 @@
               role="tab"
               id="outdoors-tab"
               aria-selected="false"
-              aria-controls="outdoors">
+              aria-controls="outdoors"
+              tabindex="-1">
               AI in the Outdoors
             </button>
           </div>
         </div>
       </header>
 
+      <!-- Accessibility: Tab panels are focusable when active so keyboard users land inside the revealed content. -->
       <section
         id="home"
         class="detail-content is-active"
         role="tabpanel"
         aria-labelledby="home-tab"
-        aria-hidden="false">
+        aria-hidden="false"
+        tabindex="0">
         <div class="detail-keypoints" aria-label="Highlights for AI in the Home">
           <div class="detail-keypoint">
             <span class="detail-keypoint__label">Adaptive comfort</span>
@@ -164,7 +171,8 @@
         class="detail-content"
         role="tabpanel"
         aria-labelledby="outdoors-tab"
-        aria-hidden="true">
+        aria-hidden="true"
+        tabindex="-1">
         <div class="detail-keypoints" aria-label="Highlights for AI in the Outdoors">
           <div class="detail-keypoint">
             <span class="detail-keypoint__label">Trail intelligence</span>
@@ -212,12 +220,16 @@
       const tabs = document.querySelectorAll('.detail-tab');
       const cards = document.querySelectorAll('.detail-card');
       const sections = document.querySelectorAll('.detail-content');
+      const validViews = Array.from(tabs)
+        .map((tab) => tab.dataset.target)
+        .filter(Boolean);
 
       function activateView(view) {
         tabs.forEach((tab) => {
           const isActive = tab.dataset.target === view;
           tab.classList.toggle('is-active', isActive);
           tab.setAttribute('aria-selected', isActive.toString());
+          tab.setAttribute('tabindex', isActive ? '0' : '-1');
         });
 
         cards.forEach((card) => {
@@ -230,33 +242,51 @@
           const isActive = section.id === view;
           section.classList.toggle('is-active', isActive);
           section.setAttribute('aria-hidden', (!isActive).toString());
+          section.setAttribute('tabindex', isActive ? '0' : '-1');
         });
+      }
+
+      function selectView(view, shouldUpdateHistory = true) {
+        if (!view || !validViews.includes(view)) {
+          return;
+        }
+        if (shouldUpdateHistory) {
+          history.replaceState(null, '', `#${view}`);
+        }
+        activateView(view);
       }
 
       tabs.forEach((tab) => {
         tab.addEventListener('click', (event) => {
           event.preventDefault();
-          const view = tab.dataset.target;
-          if (view) {
-            history.replaceState(null, '', `#${view}`);
-            activateView(view);
+          selectView(tab.dataset.target);
+        });
+      });
+
+      // Accessibility: Support roving tabindex and arrow key movement between tabs.
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+            event.preventDefault();
+            const direction = event.key === 'ArrowRight' ? 1 : -1;
+            const nextIndex = (index + direction + tabs.length) % tabs.length;
+            const nextTab = tabs[nextIndex];
+            selectView(nextTab.dataset.target);
+            nextTab.focus();
           }
         });
       });
 
-      const validViews = ['home', 'outdoors'];
       const initialHash = window.location.hash.replace('#', '');
       if (initialHash && validViews.includes(initialHash)) {
-        activateView(initialHash);
+        selectView(initialHash, false);
       } else {
-        activateView('home');
+        selectView('home', false);
       }
 
       window.addEventListener('hashchange', () => {
         const view = window.location.hash.replace('#', '');
-        if (validViews.includes(view)) {
-          activateView(view);
-        }
+        selectView(view, false);
       });
     </script>
   </body>
