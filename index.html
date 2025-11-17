@@ -17,7 +17,8 @@
     <title>AI, Explained Page</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+    <!-- Accessibility: Provide a descriptive label so assistive tech announces this as the site's primary navigation. -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">AI, Explained</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -47,7 +48,8 @@
         </div>
       </div>
     </nav>
-    <main class="page-wrapper">
+    <!-- Accessibility: Explicit main landmark makes skip links and screen readers announce primary content reliably. -->
+    <main class="page-wrapper" role="main">
       <section class="hero">
         <div class="hero__image">
           <img
@@ -70,7 +72,8 @@
       <section class="topic-section">
         <div class="section-header">
           <h2>AI in Industry</h2>
-          <a class="section-link" href="useCases.html">See more</a>
+          <!-- Accessibility: The repeated "See more" links now communicate their destination. -->
+          <a class="section-link" href="useCases.html" aria-label="See more AI in Industry stories">See more</a>
         </div>
         <div class="topic-grid">
           <a class="btn btn-primary topic-pill" href="useCases.html">AI in Education</a>
@@ -81,7 +84,7 @@
       <section class="topic-section">
         <div class="section-header">
           <h2>AI in Everyday Life</h2>
-          <a class="section-link" href="useCases.html">See more</a>
+          <a class="section-link" href="useCases.html" aria-label="See more AI in Everyday Life stories">See more</a>
         </div>
         <div class="topic-grid">
           <a class="btn btn-primary topic-pill" href="everydayDetail.html#outdoors">AI in the Outdoors</a>

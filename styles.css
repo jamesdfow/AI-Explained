@@ -26,6 +26,12 @@ a:focus {
   color: #cfe7ff;
 }
 
+/* Accessibility: Ensure text links that are not styled as buttons present a visible keyboard focus indicator. */
+a:not(.btn):focus-visible {
+  outline: 2px solid #ffd37a;
+  outline-offset: 3px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

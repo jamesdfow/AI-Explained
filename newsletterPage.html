@@ -13,7 +13,8 @@
     <title>AI, Explained Page</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
+    <!-- Accessibility: Provide a descriptive label so assistive tech announces this as the site's primary navigation. -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">AI, Explained</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="#offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -43,7 +44,8 @@
         </div>
       </div>
     </nav>
-    <main class="page-wrapper">
+    <!-- Accessibility: Explicit main landmark makes skip links and screen readers announce primary content reliably. -->
+    <main class="page-wrapper" role="main">
       <header class="page-header">
         <h1>Sign up for our monthly Newsletter!</h1>
         <p>Stay informed with curated stories, explainers, and resources to keep you ahead of the latest AI breakthroughs.</p>
